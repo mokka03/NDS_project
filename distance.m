@@ -23,7 +23,7 @@ g = @(V,w,u) lambda(V,u)*(w_inf(V,u) - w);
 
 %% Solve DES
 % Z := [V w u]
-disp('Working on plotting')
+disp('Working on DES')
 DES = @(t,Z) [
     f(Z(1),Z(2),Z(3));
     g(Z(1),Z(2),Z(3));
