@@ -59,7 +59,7 @@ xlim([0 2000])
 xlabel('t')
 ylabel('u(t)')
 
-% SaveFig('figure/','DES_solution',gcf)
+SaveFig('figure/','DES_solution',gcf)
 
 %%% Phase space
 % Compute the plotted interval
@@ -82,4 +82,4 @@ ylabel('w')
 zlabel('V')
 set(gca,'FontSize',14)
 
-% SaveFig('figure/','phase_space',gcf)
+SaveFig('figure/','phase_space',gcf)
