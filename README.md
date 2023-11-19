@@ -1,7 +1,7 @@
 # Nonlinear Dynamical Systems - Final project
 
 ### Group members
-Szabó Boglárka, Ledó Barnabás, Maucha Levente
+Boglárka Szabó, Barnabás Ledó, Levente Maucha
 
 ### Requirements
 The codes were written in MATLAB R2022b.
