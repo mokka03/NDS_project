@@ -31,11 +31,13 @@ g = @(V,w,u) lambda(V,u)*(w_inf(V,u) - w);
 V_ = -.8:0.001:.4;
 w_ = -.2:0.001:.6;
 % u_ = 0;
-u_ = -.1:0.01:.15;
+% u_ = -.1:0.01:.15; % Just to find equilibrium points
+u_ = linspace(-0.0541,0.1389,25);   % In the range of the stable cycle of the solution of u
 
 f_surf = zeros([length(V_) length(w_) length(u_)]);
 g_surf = zeros([length(V_) length(w_) length(u_)]);
 
+% Compute the surfaces
 for k = 1:length(u_)
     fprintf('Working on %i out of %i\n',k,length(u_));
     for i = 1:length(V_)
@@ -66,6 +68,6 @@ for n = 1:length(u_)
     set(gca,'FontSize',13)
     drawnow;
 %     pause(.2); % uncomment if you want to slow down the plotting
-    saveas(gcf,['figure/nullclines/u' num2str(n) '.png'])
+%     saveas(gcf,['figure/nullclines/u' num2str(n) '.png'])
 end
 

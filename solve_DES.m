@@ -31,7 +31,7 @@ DES = @(t,Z) [
     mu*(0.22+Z(1))
 ];
 
-ic = [-0.0249663;2.66312e-7;-0.0500763];
+ic = [-0.132;0.269;-0.06]; % Initial conditions based on the equilibrium point estimated by the nullclines
 t_span = [0 10000];
 
 [t,z] = ode45(DES, t_span, ic);
@@ -59,12 +59,12 @@ xlim([0 2000])
 xlabel('t')
 ylabel('u(t)')
 
-SaveFig('figure/','DES_solution',gcf)
+% SaveFig('figure/','DES_solution',gcf)
 
 %%% Phase space
 % Compute the plotted interval
 dist = zeros([1 length(t)]);
-for i = 1:length(t)-1
+for i = round(length(t)/3):length(t)-1
     dist(i) = norm(z(end,:)-z(i,:));
 end
 
@@ -82,4 +82,4 @@ ylabel('w')
 zlabel('V')
 set(gca,'FontSize',14)
 
-SaveFig('figure/','phase_space',gcf)
+% SaveFig('figure/','phase_space',gcf)
